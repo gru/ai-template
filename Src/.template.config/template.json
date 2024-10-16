@@ -1,0 +1,51 @@
+﻿{
+        "$schema": "http://json.schemastore.org/template",
+        "author": "YourName",
+        "classifications": [
+                "Web",
+                "Microservice"
+        ],
+        "identity": "AI.Microservice.Template",
+        "name": "AI Microservice Template",
+        "shortName": "ai-template",
+        "tags": {
+                "language": "C#",
+                "type": "project"
+        },
+        "sourceName": "Project",
+        "preferNameDirectory": true,
+        "symbols": {
+                "projectName": {
+                        "type": "parameter",
+                        "replaces": "Project",
+                        "fileRename": "Project"
+                },
+                "aggregateName": {
+                        "type": "parameter",
+                        "replaces": "Aggregate",
+                        "defaultValue": "Aggregate"
+                }
+        },
+        "sources": [
+                {
+                        "modifiers": [
+                                {
+                                        "rename": {
+                                                "AI.Project.sln": "AI.$projectName$.sln",
+                                                "AI.Project.csproj": "AI.$projectName$.csproj",
+                                                "AI.Project.Host.csproj": "AI.$projectName$.Host.csproj",
+                                                "AI.Project.Http.Contracts.csproj": "AI.$projectName$.Http.Contracts.csproj",
+                                                "AI.Project.Migrations.csproj": "AI.$projectName$.Migrations.csproj",
+                                                "AI.Project.Entities.csproj": "AI.$projectName$.Entities.csproj"
+                                        }
+                                },
+                                {
+                                        "rename": {
+                                                "**/*Aggregate*.cs": "**/*$aggregateName$*.cs"
+                                        },
+                                        "condition": "(aggregateName != 'Aggregate')"
+                                }
+                        ]
+                }
+        ]
+}
