@@ -21,29 +21,46 @@ This template provides a foundation for building microservices using .NET 8 and 
 
 ## Getting Started
 
+### Installing from NuGet
+
 1. Install the template:
    ```
    dotnet new --install AI.Microservice.Template
    ```
 
-2. Create a new project:
+### Installing from local .nupkg file
+
+If you have a local .nupkg file of the template, you can install it using the following steps:
+
+1. Navigate to the directory containing the .nupkg file
+2. Run the following command:
+   ```
+   dotnet new --install ./AI.Microservice.Template.1.0.0.nupkg
+   ```
+   Replace `1.0.0` with the actual version number of your .nupkg file.
+
+### Creating a new project
+
+After installing the template (either from NuGet or local .nupkg), you can create a new project:
+
+1. Create a new project:
    ```
    dotnet new ai-template -n YourProjectName
    ```
 
-3. Navigate to the project directory:
+2. Navigate to the project directory:
    ```
    cd YourProjectName
    ```
 
-4. Update the connection string in `appsettings.Development.json` with your PostgreSQL database details.
+3. Update the connection string in `appsettings.Development.json` with your PostgreSQL database details.
 
-5. Apply database migrations:
+4. Apply database migrations:
    ```
    dotnet ef database update --project Src/AI.Project.Migrations
    ```
 
-6. Run the project:
+5. Run the project:
    ```
    dotnet run --project Src/AI.Project.Host
    ```
