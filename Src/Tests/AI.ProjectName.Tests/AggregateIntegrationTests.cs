@@ -12,7 +12,7 @@ public class AggregateIntegrationTests : IClassFixture<WebApplicationFactory<Pro
 {
     private readonly IAggregateV1Controller _client;
 
-    internal AggregateIntegrationTests(WebApplicationFactory<Program> factory)
+    public AggregateIntegrationTests(WebApplicationFactory<Program> factory)
     {
         var testFactory = factory.WithWebHostBuilder(builder =>
         {
@@ -26,7 +26,7 @@ public class AggregateIntegrationTests : IClassFixture<WebApplicationFactory<Pro
                     services.Remove(descriptor);
                 }
 
-                services.AddDbContext<ProjectDbContext>(options =>
+                services.AddDbContextPool<ProjectDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("TestDatabase");
                 });

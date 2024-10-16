@@ -35,6 +35,7 @@
     <ItemGroup> 
         <Compile Remove="Src\**\*"/>
         <Compile Remove="Tests\**\*"/>
+        <Compile Include="Src\AI.ProjectName.Host\Program.Public.cs" />
     </ItemGroup>
 
 </Project>

@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <UserSecretsId>AI.Project.Host-UserSecrets</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>

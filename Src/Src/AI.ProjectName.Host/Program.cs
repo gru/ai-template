@@ -82,7 +82,7 @@ builder.Services.AddValidatorsFromAssembly(aiProjectAssembly);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddServices();
+builder.Services.AddProjectNameServices();
 
 var app = builder.Build();
 
