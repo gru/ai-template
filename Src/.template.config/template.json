@@ -12,14 +12,14 @@
                 "language": "C#",
                 "type": "project"
         },
-        "sourceName": "Project",
+        "sourceName": "ProjectName",
         "preferNameDirectory": false,
         "symbols": {
                 "projectName": {
                         "type": "parameter",
                         "isRequired": true,
-                        "replaces": "Project",
-                        "fileRename": "Project"
+                        "replaces": "ProjectName",
+                        "fileRename": "ProjectName"
                 },
                 "aggregateName": {
                         "type": "parameter",

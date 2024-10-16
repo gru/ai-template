@@ -5,14 +5,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\AI.Project.Http.Contracts\AI.Project.Http.Contracts.csproj" />
-        <ProjectReference Include="..\AI.Project.Entities\AI.Project.Entities.csproj" />
+        <ProjectReference Include="..\AI.ProjectName.Http.Contracts\AI.ProjectName.Http.Contracts.csproj" />
+        <ProjectReference Include="..\AI.ProjectName.Entities\AI.ProjectName.Entities.csproj" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="FluentValidation" />
     </ItemGroup>
     <ItemGroup>
-        <InternalsVisibleTo Include="$(AssemblyName).Host" />
-        <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+        <InternalsVisibleTo Include="AI.ProjectName.Host" />
+        <InternalsVisibleTo Include="AI.ProjectName.Tests" />
     </ItemGroup>
 </Project>

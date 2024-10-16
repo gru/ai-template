@@ -1,9 +1,9 @@
-﻿using AI.Project.Aggregate;
-using AI.Project.Http.Contracts;
+﻿using AI.ProjectName.Aggregate;
+using AI.ProjectName.Http.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Asp.Versioning;
 
-namespace AI.Project.Host.Controllers;
+namespace AI.ProjectName.Host.Controllers;
 
 [ApiController]
 [ApiVersion("1")]

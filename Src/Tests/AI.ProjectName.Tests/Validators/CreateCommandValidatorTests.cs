@@ -1,9 +1,9 @@
-﻿using AI.Project.Http.Contracts;
-using AI.Project.Validators;
+﻿using AI.ProjectName.Http.Contracts;
+using AI.ProjectName.Validators;
 using FluentValidation.TestHelper;
 using Xunit;
 
-namespace AI.Project.Tests.Validators
+namespace AI.ProjectName.Tests.Validators
 {
     public class CreateCommandValidatorTests
     {

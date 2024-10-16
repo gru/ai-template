@@ -21,11 +21,10 @@
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
         <PackageReference Include="NSubstitute"/>
-        <PackageReference Include="FluentValidation" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\..\Src\AI.Project.Host\AI.Project.Host.csproj" />
+      <ProjectReference Include="..\..\Src\AI.ProjectName.Host\AI.ProjectName.Host.csproj" />
     </ItemGroup>
 </Project>

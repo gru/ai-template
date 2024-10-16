@@ -1,4 +1,4 @@
-﻿namespace AI.Project;
+﻿namespace AI.ProjectName;
 
 /// <summary>
 /// Contains constants for feature toggles used in the application.

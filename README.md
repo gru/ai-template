@@ -45,7 +45,7 @@ After installing the template (either from NuGet or local .nupkg), you can creat
 
 1. Create a new project:
    ```
-   dotnet new ai-template -n YourProjectName
+   dotnet new ai-template --projectName Project --aggregateName Aggregate
    ```
 
 2. Navigate to the project directory:
@@ -57,22 +57,22 @@ After installing the template (either from NuGet or local .nupkg), you can creat
 
 4. Apply database migrations:
    ```
-   dotnet ef database update --project Src/AI.Project.Migrations
+   dotnet ef database update --project Src/AI.ProjectName.Migrations
    ```
 
 5. Run the project:
    ```
-   dotnet run --project Src/AI.Project.Host
+   dotnet run --project Src/AI.ProjectName.Host
    ```
 
 ## Project Structure
 
-- `AI.Project`: Core business logic and domain models
-- `AI.Project.Entities`: Database entities and DbContext
-- `AI.Project.Host`: API host project
-- `AI.Project.Http.Contracts`: API contracts (DTOs and interfaces)
-- `AI.Project.Migrations`: Database migrations
-- `AI.Project.Tests`: Unit and integration tests
+- `AI.ProjectName`: Core business logic and domain models
+- `AI.ProjectName.Entities`: Database entities and DbContext
+- `AI.ProjectName.Host`: API host project
+- `AI.ProjectName.Http.Contracts`: API contracts (DTOs and interfaces)
+- `AI.ProjectName.Migrations`: Database migrations
+- `AI.ProjectName.Tests`: Unit and integration tests
 
 ## Configuration
 
@@ -82,11 +82,11 @@ After installing the template (either from NuGet or local .nupkg), you can creat
 
 ## Adding New Features
 
-1. Create new entities in the `AI.Project.Entities` project
-2. Add corresponding DTOs in `AI.Project.Http.Contracts`
-3. Implement business logic in `AI.Project`
-4. Create new controllers in `AI.Project.Host`
-5. Add integration tests in `AI.Project.Tests`
+1. Create new entities in the `AI.ProjectName.Entities` project
+2. Add corresponding DTOs in `AI.ProjectName.Http.Contracts`
+3. Implement business logic in `AI.ProjectName`
+4. Create new controllers in `AI.ProjectName.Host`
+5. Add integration tests in `AI.ProjectName.Tests`
 
 ## Running Tests
 

@@ -7,7 +7,7 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\AI.Project.Entities\AI.Project.Entities.csproj" />
+        <ProjectReference Include="..\AI.ProjectName.Entities\AI.ProjectName.Entities.csproj" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL"/>

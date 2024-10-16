@@ -1,7 +1,7 @@
-﻿using AI.Project.Http.Contracts;
+﻿using AI.ProjectName.Http.Contracts;
 using FluentValidation;
 
-namespace AI.Project.Validators;
+namespace AI.ProjectName.Validators;
 
 public class CreateCommandValidator : AbstractValidator<CreateAggregateCommand>
 {

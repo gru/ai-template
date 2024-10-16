@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using AI.Project.Aggregate;
+using AI.ProjectName.Aggregate;
 
-namespace AI.Project
+namespace AI.ProjectName
 {
     public static class ServiceCollectionExtensions
     {

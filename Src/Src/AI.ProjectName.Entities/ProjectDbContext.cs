@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace AI.Project.Entities;
+namespace AI.ProjectName.Entities;
 
 public class ProjectDbContext : DbContext
 {

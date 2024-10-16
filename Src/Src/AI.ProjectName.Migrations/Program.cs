@@ -1,4 +1,4 @@
-﻿using AI.Project.Entities;
+﻿using AI.ProjectName.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

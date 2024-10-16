@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
-using AI.Project;
-using AI.Project.Entities;
+using AI.ProjectName;
+using AI.ProjectName.Entities;
 using Microsoft.FeatureManagement;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -77,7 +77,7 @@ builder.Services.AddDbContextPool<ProjectDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), 
         npgsqlOptions => npgsqlOptions.EnableRetryOnFailure()));
 
-var aiProjectAssembly = Assembly.Load("AI.Project");
+var aiProjectAssembly = Assembly.Load("AI.ProjectName");
 builder.Services.AddValidatorsFromAssembly(aiProjectAssembly);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -95,7 +95,7 @@ foreach (var description in versionProvider.ApiVersionDescriptions)
         description.GroupName,
         new OpenApiInfo
         {
-            Title = $"AI.Project API {description.ApiVersion}",
+            Title = $"AI.ProjectName API {description.ApiVersion}",
             Version = description.ApiVersion.ToString()
         });
 }

@@ -1,6 +1,6 @@
 ﻿using RestEase;
 
-namespace AI.Project.Http.Contracts;
+namespace AI.ProjectName.Http.Contracts;
 
 /// <summary>
 /// Represents the contract for the Aggregate API (version 1).

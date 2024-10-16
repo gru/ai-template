@@ -21,14 +21,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="*.*" />
+        <Content Include="*.*" Exclude="AI.Template.csproj"/>
         <Content Include="AI\**\*" />
-        <Content Include="Src\AI.Project\**\*" Exclude="Src\AI.Project\**\bin\**;Src\AI.Project\**\obj\**" />
-        <Content Include="Src\AI.Project.Host\**\*" Exclude="Src\AI.Project.Host\**\bin\**;Src\AI.Project.Host\**\obj\**" />
-        <Content Include="Src\AI.Project.Http.Contracts\**\*" Exclude="Src\AI.Project.Http.Contracts\**\bin\**;Src\AI.Project.Http.Contracts\**\obj\**" />
-        <Content Include="Src\AI.Project.Migrations\**\*" Exclude="Src\AI.Project.Migrations\**\bin\**;Src\AI.Project.Migrations\**\obj\**" />
-        <Content Include="Src\AI.Project.Entities\**\*" Exclude="Src\AI.Project.Entities\**\bin\**;Src\AI.Project.Entities\**\obj\**" />
-        <Content Include="Tests\AI.Project.Tests\**\*" Exclude="Tests\AI.Project.Tests\**\bin\**;Tests\AI.Project.Tests\**\obj\**" />
+        <Content Include="Src\AI.ProjectName\**\*" Exclude="Src\AI.ProjectName\**\bin\**;Src\AI.ProjectName\**\obj\**" />
+        <Content Include="Src\AI.ProjectName.Host\**\*" Exclude="Src\AI.ProjectName.Host\**\bin\**;Src\AI.ProjectName.Host\**\obj\**" />
+        <Content Include="Src\AI.ProjectName.Http.Contracts\**\*" Exclude="Src\AI.ProjectName.Http.Contracts\**\bin\**;Src\AI.ProjectName.Http.Contracts\**\obj\**" />
+        <Content Include="Src\AI.ProjectName.Migrations\**\*" Exclude="Src\AI.ProjectName.Migrations\**\bin\**;Src\AI.ProjectName.Migrations\**\obj\**" />
+        <Content Include="Src\AI.ProjectName.Entities\**\*" Exclude="Src\AI.ProjectName.Entities\**\bin\**;Src\AI.ProjectName.Entities\**\obj\**" />
+        <Content Include="Tests\AI.ProjectName.Tests\**\*" Exclude="Tests\AI.ProjectName.Tests\**\bin\**;Tests\AI.ProjectName.Tests\**\obj\**" />
         <Content Include=".template.config\**\*" />
     </ItemGroup>
 

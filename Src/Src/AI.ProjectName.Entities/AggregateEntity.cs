@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AI.Project.Entities;
+namespace AI.ProjectName.Entities;
 
 [Table("aggregates")]
 public class AggregateEntity

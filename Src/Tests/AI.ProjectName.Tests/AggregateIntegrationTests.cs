@@ -1,12 +1,12 @@
-﻿using AI.Project.Entities;
-using AI.Project.Http.Contracts;
+﻿using AI.ProjectName.Entities;
+using AI.ProjectName.Http.Contracts;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using RestEase;
 using Xunit;
 
-namespace AI.Project.Tests;
+namespace AI.ProjectName.Tests;
 
 public class AggregateIntegrationTests : IClassFixture<WebApplicationFactory<Program>>
 {

@@ -1,8 +1,8 @@
-﻿using AI.Project.Entities;
-using AI.Project.Http.Contracts;
+﻿using AI.ProjectName.Entities;
+using AI.ProjectName.Http.Contracts;
 using FluentValidation;
 
-namespace AI.Project.Aggregate;
+namespace AI.ProjectName.Aggregate;
 
 internal class AggregateHandler(ProjectDbContext dbContext, IValidator<CreateAggregateCommand> validator)
 {

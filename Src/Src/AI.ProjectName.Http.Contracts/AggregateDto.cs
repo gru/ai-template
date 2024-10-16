@@ -1,4 +1,4 @@
-﻿namespace AI.Project.Http.Contracts;
+﻿namespace AI.ProjectName.Http.Contracts;
 
 /// <summary>
 /// Aggregate.
