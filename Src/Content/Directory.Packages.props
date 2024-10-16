@@ -8,7 +8,6 @@
     <PackageVersion Include="Microsoft.Extensions.Configuration.CommandLine" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageVersion Include="Microsoft.FeatureManagement.AspNetCore" Version="3.0.0" />
 
     <!-- Npgsql -->
@@ -35,7 +34,10 @@
     <PackageVersion Include="coverlet.collector" Version="6.0.0" />
     <PackageVersion Include="NSubstitute" Version="5.1.0" />
     <PackageVersion Include="FluentValidation" Version="11.8.0" />
-
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    
     <!-- FluentValidation packages -->
     <PackageVersion Include="FluentValidation" Version="11.8.1" />
     <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="11.8.1" />
