@@ -3,3 +3,4 @@
 .aidigestignore
 **/.idea/
 AI/Promts/Steps
+CHANGELOG.md

@@ -14,41 +14,77 @@ This template provides a foundation for building microservices using .NET 8 and 
 - Unit and integration tests with xUnit
 - Docker support
 
-## Usage
+## Prerequisites
 
-### Installing from NuGet
+- .NET 8 SDK
+- PostgreSQL database server
 
-To install the template from NuGet, run the following command:
+## Getting Started
 
-```bash
-dotnet new --install AI.Microservice.Template
+1. Install the template:
+   ```
+   dotnet new --install AI.Microservice.Template
+   ```
+
+2. Create a new project:
+   ```
+   dotnet new ai-template -n YourProjectName
+   ```
+
+3. Navigate to the project directory:
+   ```
+   cd YourProjectName
+   ```
+
+4. Update the connection string in `appsettings.Development.json` with your PostgreSQL database details.
+
+5. Apply database migrations:
+   ```
+   dotnet ef database update --project Src/AI.Project.Migrations
+   ```
+
+6. Run the project:
+   ```
+   dotnet run --project Src/AI.Project.Host
+   ```
+
+## Project Structure
+
+- `AI.Project`: Core business logic and domain models
+- `AI.Project.Entities`: Database entities and DbContext
+- `AI.Project.Host`: API host project
+- `AI.Project.Http.Contracts`: API contracts (DTOs and interfaces)
+- `AI.Project.Migrations`: Database migrations
+- `AI.Project.Tests`: Unit and integration tests
+
+## Configuration
+
+- Database connection string is configured in `appsettings.Development.json`
+- Logging configuration can be found in `appsettings.json`
+- Feature flags are managed through the `FeatureManagement` section in `appsettings.json`
+
+## Adding New Features
+
+1. Create new entities in the `AI.Project.Entities` project
+2. Add corresponding DTOs in `AI.Project.Http.Contracts`
+3. Implement business logic in `AI.Project`
+4. Create new controllers in `AI.Project.Host`
+5. Add integration tests in `AI.Project.Tests`
+
+## Running Tests
+
+```
+dotnet test
 ```
 
-### Installing from local .nupkg file
+## Docker Support
 
-If you have a local .nupkg file, you can install the template using:
+A Dockerfile is provided for containerization. To build and run the Docker image:
 
-```bash
-dotnet new --install path/to/AI.Microservice.Template.1.0.0.nupkg
 ```
-
-### Creating a new project
-
-Once installed, you can create a new project using the template:
-
-```bash
-dotnet new ai-template -n YourProjectName
+docker build -t ai-microservice .
+docker run -p 8080:80 ai-microservice
 ```
-
-This will create a new solution with the specified name, ready for you to start developing your microservice.
-
-## Customization
-
-After creating your project, you may want to:
-
-1. Update the connection string in `appsettings.json` for your database.
-2. Modify the `AggregateEntity` and related classes to fit your domain model.
-3. Add additional controllers, services, and entities as needed for your microservice.
 
 ## Contributing
 

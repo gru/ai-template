@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
 using AI.Project;
+using AI.Project.Entities;
 using Microsoft.FeatureManagement;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using FluentValidation;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,6 +72,10 @@ builder.Services.AddProblemDetails(options =>
         }
     };
 });
+
+builder.Services.AddDbContextPool<ProjectDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), 
+        npgsqlOptions => npgsqlOptions.EnableRetryOnFailure()));
 
 var aiProjectAssembly = Assembly.Load("AI.Project");
 builder.Services.AddValidatorsFromAssembly(aiProjectAssembly);
