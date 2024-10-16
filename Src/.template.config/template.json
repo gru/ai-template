@@ -13,7 +13,7 @@
                 "type": "project"
         },
         "sourceName": "Project",
-        "preferNameDirectory": true,
+        "preferNameDirectory": false,
         "symbols": {
                 "projectName": {
                         "type": "parameter",

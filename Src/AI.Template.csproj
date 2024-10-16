@@ -21,19 +21,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="Content\*.*" />
-        <Content Include="Content\AI\**\*" />
-        <Content Include="Content\Src\AI.Project\**\*" Exclude="Content\Src\AI.Project\**\bin\**;Content\Src\AI.Project\**\obj\**" />
-        <Content Include="Content\Src\AI.Project.Host\**\*" Exclude="Content\Src\AI.Project.Host\**\bin\**;Content\Src\AI.Project.Host\**\obj\**" />
-        <Content Include="Content\Src\AI.Project.Http.Contracts\**\*" Exclude="Content\Src\AI.Project.Http.Contracts\**\bin\**;Content\Src\AI.Project.Http.Contracts\**\obj\**" />
-        <Content Include="Content\Src\AI.Project.Migrations\**\*" Exclude="Content\Src\AI.Project.Migrations\**\bin\**;Content\Src\AI.Project.Migrations\**\obj\**" />
-        <Content Include="Content\Src\AI.Project.Entities\**\*" Exclude="Content\Src\AI.Project.Entities\**\bin\**;Content\Src\AI.Project.Entities\**\obj\**" />
-        <Content Include="Content\Tests\AI.Project.Tests\**\*" Exclude="Content\Tests\AI.Project.Tests\**\bin\**;Content\Tests\AI.Project.Tests\**\obj\**" />
+        <Content Include="*.*" />
+        <Content Include="AI\**\*" />
+        <Content Include="Src\AI.Project\**\*" Exclude="Src\AI.Project\**\bin\**;Src\AI.Project\**\obj\**" />
+        <Content Include="Src\AI.Project.Host\**\*" Exclude="Src\AI.Project.Host\**\bin\**;Src\AI.Project.Host\**\obj\**" />
+        <Content Include="Src\AI.Project.Http.Contracts\**\*" Exclude="Src\AI.Project.Http.Contracts\**\bin\**;Src\AI.Project.Http.Contracts\**\obj\**" />
+        <Content Include="Src\AI.Project.Migrations\**\*" Exclude="Src\AI.Project.Migrations\**\bin\**;Src\AI.Project.Migrations\**\obj\**" />
+        <Content Include="Src\AI.Project.Entities\**\*" Exclude="Src\AI.Project.Entities\**\bin\**;Src\AI.Project.Entities\**\obj\**" />
+        <Content Include="Tests\AI.Project.Tests\**\*" Exclude="Tests\AI.Project.Tests\**\bin\**;Tests\AI.Project.Tests\**\obj\**" />
         <Content Include=".template.config\**\*" />
     </ItemGroup>
 
     <ItemGroup> 
-        <Compile Remove="Content\**\*"/>
+        <Compile Remove="Src\**\*"/>
+        <Compile Remove="Tests\**\*"/>
     </ItemGroup>
 
 </Project>
