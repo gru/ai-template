@@ -12,7 +12,7 @@ namespace AI.ProjectName.Host.Controllers;
 [ApiController]
 [ApiVersion("1")]
 [Route("api/v{version:apiVersion}/[controller]")]
-internal class AggregateController : ControllerBase
+public class AggregateController : ControllerBase
 {
     private readonly AggregateHandler _aggregateHandler;
 

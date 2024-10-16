@@ -8,7 +8,7 @@ namespace AI.ProjectName.Aggregate;
 /// Handles business logic operations related to Aggregates.
 /// This class is responsible for creating and retrieving Aggregate entities.
 /// </summary>
-internal class AggregateHandler
+public class AggregateHandler
 {
     private readonly ProjectDbContext _dbContext;
     private readonly IValidator<CreateAggregateCommand> _validator;
