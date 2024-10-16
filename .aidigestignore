@@ -1,5 +1,6 @@
-*/.gitkeep
-*/.gitignore
+**/.gitkeep
+**/.gitignore
+**/.dockerignore
 .aidigestignore
 **/.idea/
 AI/Promts/Steps

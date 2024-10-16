@@ -17,35 +17,16 @@
         "symbols": {
                 "projectName": {
                         "type": "parameter",
+                        "isRequired": true,
                         "replaces": "Project",
                         "fileRename": "Project"
                 },
                 "aggregateName": {
                         "type": "parameter",
+                        "isRequired": true,
                         "replaces": "Aggregate",
-                        "defaultValue": "Aggregate"
+                        "defaultValue": "Aggregate",
+                        "fileRename": "Aggregate"
                 }
-        },
-        "sources": [
-                {
-                        "modifiers": [
-                                {
-                                        "rename": {
-                                                "AI.Project.sln": "AI.$projectName$.sln",
-                                                "AI.Project.csproj": "AI.$projectName$.csproj",
-                                                "AI.Project.Host.csproj": "AI.$projectName$.Host.csproj",
-                                                "AI.Project.Http.Contracts.csproj": "AI.$projectName$.Http.Contracts.csproj",
-                                                "AI.Project.Migrations.csproj": "AI.$projectName$.Migrations.csproj",
-                                                "AI.Project.Entities.csproj": "AI.$projectName$.Entities.csproj"
-                                        }
-                                },
-                                {
-                                        "rename": {
-                                                "**/*Aggregate*.cs": "**/*$aggregateName$*.cs"
-                                        },
-                                        "condition": "(aggregateName != 'Aggregate')"
-                                }
-                        ]
-                }
-        ]
+        }
 }

@@ -35,7 +35,7 @@ If you have a local .nupkg file of the template, you can install it using the fo
 1. Navigate to the directory containing the .nupkg file
 2. Run the following command:
    ```
-   dotnet new --install ./AI.Microservice.Template.1.0.0.nupkg
+   dotnet new install ./AI.Microservice.Template.0.1.0.nupkg --force
    ```
    Replace `1.0.0` with the actual version number of your .nupkg file.
 

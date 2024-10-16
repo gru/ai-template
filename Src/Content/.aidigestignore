@@ -1,0 +1,5 @@
+﻿**/.gitkeep
+**/.gitignore
+.aidigestignore
+**/.idea/
+**/.dockerignore
