@@ -21,9 +21,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="Content\AI.Project.sln" />
-        <Content Include="Content\Directory.Build.props" />
-        <Content Include="Content\Directory.Packages.props" />
+        <Content Include="Content\*.*" />
+        <Content Include="Content\AI\**\*" />
         <Content Include="Content\Src\AI.Project\**\*" Exclude="Content\Src\AI.Project\**\bin\**;Content\Src\AI.Project\**\obj\**" />
         <Content Include="Content\Src\AI.Project.Host\**\*" Exclude="Content\Src\AI.Project.Host\**\bin\**;Content\Src\AI.Project.Host\**\obj\**" />
         <Content Include="Content\Src\AI.Project.Http.Contracts\**\*" Exclude="Content\Src\AI.Project.Http.Contracts\**\bin\**;Content\Src\AI.Project.Http.Contracts\**\obj\**" />
