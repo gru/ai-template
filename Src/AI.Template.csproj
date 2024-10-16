@@ -2,19 +2,20 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.0</PackageVersion>
+        <PackageVersion>0.1.0</PackageVersion>
         <PackageId>AI.Microservice.Template</PackageId>
         <Title>AI Microservice Template</Title>
-        <Authors>YourName</Authors>
+        <Authors>claude-ai</Authors>
         <Description>Template for creating a microservice solution with multiple projects.</Description>
         <PackageTags>dotnet-new;templates;microservice</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.1.0</Version>
         
         <TargetFramework>net8.0</TargetFramework>
 
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
-        <ContentTargetFolders>content</ContentTargetFolders>
+        <ContentTargetFolders>Content</ContentTargetFolders>
         <NoWarn>$(NoWarn);NU5128</NoWarn>
         <NoDefaultExcludes>true</NoDefaultExcludes>
     </PropertyGroup>
