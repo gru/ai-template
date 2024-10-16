@@ -40,7 +40,7 @@ builder.Services.AddApiVersioning(options =>
 })
 .AddApiExplorer(options =>
 {
-    options.GroupNameFormat = "'v'V";
+    options.GroupNameFormat = "'v'VVV";
     options.SubstituteApiVersionInUrl = true;
 });
 
@@ -113,7 +113,7 @@ if (app.Environment.IsDevelopment())
         {
             options.SwaggerEndpoint(
                 $"/swagger/{description.GroupName}/swagger.json",
-                description.GroupName.ToUpperInvariant());
+                description.GroupName);
         }
     });
 }
