@@ -22,6 +22,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".SolutionItems", ".Solution
 		.gitignore = .gitignore
 		CHANGELOG.md = CHANGELOG.md
 		README.md = README.md
+		UpdateCodebase.cmd = UpdateCodebase.cmd
+		UpdateCodebase.ps1 = UpdateCodebase.ps1
+		update-codebase.sh = update-codebase.sh
 	EndProjectSection
 EndProject
 Global
