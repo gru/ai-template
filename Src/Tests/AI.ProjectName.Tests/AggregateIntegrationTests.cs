@@ -19,14 +19,14 @@ public class AggregateIntegrationTests : IClassFixture<WebApplicationFactory<Pro
             builder.ConfigureServices(services =>
             {
                 var descriptor = services.SingleOrDefault(
-                    d => d.ServiceType == typeof(DbContextOptions<ProjectDbContext>));
+                    d => d.ServiceType == typeof(DbContextOptions<ProjectNameDbContext>));
 
                 if (descriptor != null)
                 {
                     services.Remove(descriptor);
                 }
 
-                services.AddDbContextPool<ProjectDbContext>(options =>
+                services.AddDbContextPool<ProjectNameDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("TestDatabase");
                 });

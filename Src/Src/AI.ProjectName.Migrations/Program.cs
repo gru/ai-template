@@ -1,5 +1,6 @@
 ﻿using AI.ProjectName.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
@@ -7,6 +8,7 @@ using Serilog;
 var configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile("appsettings.Development.json", optional: true)
     .AddEnvironmentVariables()
     .Build();
 
@@ -22,7 +24,7 @@ try
     services.AddLogging(loggingBuilder =>
         loggingBuilder.AddSerilog(dispose: true));
 
-    services.AddDbContext<ProjectDbContext>(options =>
+    services.AddDbContext<ProjectNameDbContext>(options =>
         options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
     var serviceProvider = services.BuildServiceProvider();
@@ -31,7 +33,7 @@ try
     using (var scope = serviceProvider.CreateScope())
     {
         var dbContext = scope.ServiceProvider
-            .GetRequiredService<ProjectDbContext>();
+            .GetRequiredService<ProjectNameDbContext>();
         
         await dbContext.Database.MigrateAsync();
     }
@@ -49,4 +51,22 @@ catch (Exception ex)
 finally
 {
     Log.CloseAndFlush();
+}
+
+internal class StorageDbContextFactory : IDesignTimeDbContextFactory<ProjectNameDbContext>
+{
+    public ProjectNameDbContext CreateDbContext(string[] args)
+    {
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile("appsettings.Development.json", optional: true)
+            .AddEnvironmentVariables()
+            .Build();
+        
+        var optionsBuilder = new DbContextOptionsBuilder<ProjectNameDbContext>();
+        optionsBuilder.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
+
+        return new ProjectNameDbContext(optionsBuilder.Options);
+    }
 }

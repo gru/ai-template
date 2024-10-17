@@ -10,7 +10,7 @@ namespace AI.ProjectName.Aggregate;
 /// </summary>
 public class AggregateHandler
 {
-    private readonly ProjectDbContext _dbContext;
+    private readonly ProjectNameDbContext _dbContext;
     private readonly IValidator<CreateAggregateCommand> _validator;
 
     /// <summary>
@@ -18,7 +18,7 @@ public class AggregateHandler
     /// </summary>
     /// <param name="dbContext">The database context for accessing Aggregate entities.</param>
     /// <param name="validator">The validator for CreateAggregateCommand.</param>
-    public AggregateHandler(ProjectDbContext dbContext, IValidator<CreateAggregateCommand> validator)
+    public AggregateHandler(ProjectNameDbContext dbContext, IValidator<CreateAggregateCommand> validator)
     {
         _dbContext = dbContext;
         _validator = validator;
