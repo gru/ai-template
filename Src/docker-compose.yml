@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: storage-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  minio_storage:
+  postgres_data:
